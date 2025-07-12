@@ -233,4 +233,50 @@ body {
   transition-delay: 0s;
 }
 
+.green-box {
+  width: 400px;
+  height: 400px;
+  margin: 100px auto;
+  position: relative;
+  background-color: transparent;
+  overflow: hidden;
+}
+
+.green-box::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  clip-path: polygon(50% 0%, 60% 20%, 40% 20%, 100% 50%, 80% 40%, 80% 60%, 50% 100%, 40% 80%, 60% 80%, 0% 50%, 20% 60%, 20% 40%);
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  transform: rotate(45deg);
+  background: linear-gradient(to bottom right, transparent 50%, #a0b654 50%) top left, linear-gradient(to bottom left, transparent 50%, #6f803c 50%) top right, linear-gradient(to top right, transparent 50%, #7a8d3e 50%) bottom left, linear-gradient(to top left, transparent 50%, #5c6e30 50%) bottom right;
+  background-size: 50% 50%;
+  background-repeat: no-repeat;
+  animation: rotateColors 1s linear infinite;
+}
+
+@keyframes rotateColors {
+  0%, 100% {
+    background: linear-gradient(to bottom right, transparent 50%, #a0b654 50%) top left, linear-gradient(to bottom left, transparent 50%, #6f803c 50%) top right, linear-gradient(to top right, transparent 50%, #5c6e30 50%) bottom left, linear-gradient(to top left, transparent 50%, #7a8d3e 50%) bottom right;
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+  }
+  25% {
+    background: linear-gradient(to bottom right, transparent 50%, #7a8d3e 50%) top left, linear-gradient(to bottom left, transparent 50%, #6f803c 50%) top right, linear-gradient(to top right, transparent 50%, #a0b654 50%) bottom left, linear-gradient(to top left, transparent 50%, #5c6e30 50%) bottom right;
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+  }
+  50% {
+    background: linear-gradient(to bottom right, transparent 50%, #7a8d3e 50%) top left, linear-gradient(to bottom left, transparent 50%, #5c6e30 50%) top right, linear-gradient(to top right, transparent 50%, #6f803c 50%) bottom left, linear-gradient(to top left, transparent 50%, #a0b654 50%) bottom right;
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+  }
+  75% {
+    background: linear-gradient(to bottom right, transparent 50%, #5c6e30 50%) top left, linear-gradient(to bottom left, transparent 50%, #a0b654 50%) top right, linear-gradient(to top right, transparent 50%, #6f803c 50%) bottom left, linear-gradient(to top left, transparent 50%, #7a8d3e 50%) bottom right;
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
